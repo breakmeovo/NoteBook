@@ -22,6 +22,7 @@
 		5F543B482CE6350B00881451 /* RSDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F543B3A2CE6350B00881451 /* RSDTabBarController.swift */; };
 		5F543B492CE6350B00881451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F543B3B2CE6350B00881451 /* SceneDelegate.swift */; };
 		5F543B4A2CE6350B00881451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F543B3C2CE6350B00881451 /* ViewController.swift */; };
+		C456FBB53D29EBEEABA26344 /* Pods_notebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A3E5E4708DA721EEECEEA7 /* Pods_notebook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,9 @@
 		5F543B3A2CE6350B00881451 /* RSDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSDTabBarController.swift; sourceTree = "<group>"; };
 		5F543B3B2CE6350B00881451 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F543B3C2CE6350B00881451 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6AE61F9F9E9EDC7AF872956C /* Pods-notebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notebook.debug.xcconfig"; path = "Target Support Files/Pods-notebook/Pods-notebook.debug.xcconfig"; sourceTree = "<group>"; };
+		96D18690393DDF0D551D01B1 /* Pods-notebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notebook.release.xcconfig"; path = "Target Support Files/Pods-notebook/Pods-notebook.release.xcconfig"; sourceTree = "<group>"; };
+		97A3E5E4708DA721EEECEEA7 /* Pods_notebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C456FBB53D29EBEEABA26344 /* Pods_notebook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A5E650E1157FDC10AC56D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AE61F9F9E9EDC7AF872956C /* Pods-notebook.debug.xcconfig */,
+				96D18690393DDF0D551D01B1 /* Pods-notebook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4209A4DFA10450DD7E21D775 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97A3E5E4708DA721EEECEEA7 /* Pods_notebook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F543AFE2CE634C000881451 = {
 			isa = PBXGroup;
 			children = (
 				5F543B092CE634C000881451 /* notebook */,
 				5F543B082CE634C000881451 /* Products */,
+				19A5E650E1157FDC10AC56D9 /* Pods */,
+				4209A4DFA10450DD7E21D775 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F543B1B2CE634C100881451 /* Build configuration list for PBXNativeTarget "notebook" */;
 			buildPhases = (
+				2BA955D9608874DF440B02C4 /* [CP] Check Pods Manifest.lock */,
 				5F543B032CE634C000881451 /* Sources */,
 				5F543B042CE634C000881451 /* Frameworks */,
 				5F543B052CE634C000881451 /* Resources */,
+				9B3EF4490FA0C83432B07ADD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +340,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BA955D9608874DF440B02C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-notebook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B3EF4490FA0C83432B07ADD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-notebook/Pods-notebook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-notebook/Pods-notebook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-notebook/Pods-notebook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F543B032CE634C000881451 /* Sources */ = {
@@ -391,7 +459,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -454,7 +522,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -475,6 +543,7 @@
 		};
 		5F543B1C2CE634C100881451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE61F9F9E9EDC7AF872956C /* Pods-notebook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,8 +555,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,6 +573,7 @@
 		};
 		5F543B1D2CE634C100881451 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96D18690393DDF0D551D01B1 /* Pods-notebook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -514,8 +585,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

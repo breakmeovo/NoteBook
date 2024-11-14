@@ -1,0 +1,96 @@
+PODS:
+  - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManagerSwift (6.5.16)
+  - KeychainSwift (24.0.0)
+  - Kingfisher (8.1.0)
+  - MJRefresh (3.7.9)
+  - RSDSwiftKit (1.0.0):
+    - IQKeyboardManagerSwift (~> 6.5.15)
+    - MJRefresh (~> 3.7.5)
+    - RSKImageCropper (~> 4.1.1)
+    - SnapKit (~> 5.6.0)
+  - RSKImageCropper (4.1.1)
+  - SnapKit (5.6.0)
+  - SwifterSwift (6.2.0):
+    - SwifterSwift/AppKit (= 6.2.0)
+    - SwifterSwift/Combine (= 6.2.0)
+    - SwifterSwift/CoreAnimation (= 6.2.0)
+    - SwifterSwift/CoreGraphics (= 6.2.0)
+    - SwifterSwift/CoreLocation (= 6.2.0)
+    - SwifterSwift/CryptoKit (= 6.2.0)
+    - SwifterSwift/Dispatch (= 6.2.0)
+    - SwifterSwift/Foundation (= 6.2.0)
+    - SwifterSwift/HealthKit (= 6.2.0)
+    - SwifterSwift/MapKit (= 6.2.0)
+    - SwifterSwift/SceneKit (= 6.2.0)
+    - SwifterSwift/SpriteKit (= 6.2.0)
+    - SwifterSwift/StoreKit (= 6.2.0)
+    - SwifterSwift/SwiftStdlib (= 6.2.0)
+    - SwifterSwift/UIKit (= 6.2.0)
+    - SwifterSwift/WebKit (= 6.2.0)
+  - SwifterSwift/AppKit (6.2.0)
+  - SwifterSwift/Combine (6.2.0)
+  - SwifterSwift/CoreAnimation (6.2.0)
+  - SwifterSwift/CoreGraphics (6.2.0)
+  - SwifterSwift/CoreLocation (6.2.0)
+  - SwifterSwift/CryptoKit (6.2.0)
+  - SwifterSwift/Dispatch (6.2.0)
+  - SwifterSwift/Foundation (6.2.0)
+  - SwifterSwift/HealthKit (6.2.0)
+  - SwifterSwift/MapKit (6.2.0)
+  - SwifterSwift/SceneKit (6.2.0)
+  - SwifterSwift/SpriteKit (6.2.0)
+  - SwifterSwift/StoreKit (6.2.0)
+  - SwifterSwift/SwiftStdlib (6.2.0)
+  - SwifterSwift/UIKit (6.2.0)
+  - SwifterSwift/WebKit (6.2.0)
+  - Toast-Swift (5.1.1)
+
+DEPENDENCIES:
+  - FDFullscreenPopGesture
+  - IQKeyboardManagerSwift (~> 6.5.15)
+  - KeychainSwift (~> 24.0)
+  - Kingfisher
+  - RSDSwiftKit (from `../RSDSwiftKit/`)
+  - RSKImageCropper (~> 4.1.1)
+  - SnapKit (~> 5.6.0)
+  - SwifterSwift (from `https://github.com/breakmeovo/SwifterSwift.git`)
+  - Toast-Swift (~> 5.1.1)
+
+SPEC REPOS:
+  trunk:
+    - FDFullscreenPopGesture
+    - IQKeyboardManagerSwift
+    - KeychainSwift
+    - Kingfisher
+    - MJRefresh
+    - RSKImageCropper
+    - SnapKit
+    - Toast-Swift
+
+EXTERNAL SOURCES:
+  RSDSwiftKit:
+    :path: "../RSDSwiftKit/"
+  SwifterSwift:
+    :git: https://github.com/breakmeovo/SwifterSwift.git
+
+CHECKOUT OPTIONS:
+  SwifterSwift:
+    :commit: ddeec78361fa9c2869f26f18562056bc4c9e8417
+    :git: https://github.com/breakmeovo/SwifterSwift.git
+
+SPEC CHECKSUMS:
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
+  KeychainSwift: 007c4647486e4563adca839cf02cef00deb3b670
+  Kingfisher: dfbf20b6249ed4ef6f18d6a96c847bce860bdb95
+  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
+  RSDSwiftKit: 83db05a1caac170674ea35f733ce063fc6fb06e6
+  RSKImageCropper: 5f1100a1e2088c349562c8dd06c632bfc2ea56a7
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwifterSwift: dd00873fb09cde19da88bdb2878f9fe70fe27b0f
+  Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
+
+PODFILE CHECKSUM: b3e4d254220b80a7e202ebb1f0ee0890d6718b3e
+
+COCOAPODS: 1.16.2
