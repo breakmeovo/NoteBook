@@ -11,24 +11,23 @@ class CenterMainController: RSDBaseViewController {
     @IBOutlet weak var styleControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let appTheme = UserDefaults.standard.string(forKey: KStore.appTheme.rawValue) {
-//            self.styleSwitch.isOn = appTheme == VStore.APP_THEME_DARK
-//        }else{
-//            let style = UITraitCollection.current.userInterfaceStyle
-//            self.styleSwitch.isOn = style == .dark
-//            
-//        }
+        switch ThemeManager.shared.currentTheme {
+        case .system:
+            self.styleControl.selectedSegmentIndex = 0
+        case .dark:
+            self.styleControl.selectedSegmentIndex = 1
+        case .light:
+            self.styleControl.selectedSegmentIndex = 2
+        }
     }
 
     @IBAction func styleAction(_ sender: Any) {
         if  self.styleControl.selectedSegmentIndex == 0 {
-            
+            ThemeManager.shared.currentTheme = .system
         }else if self.styleControl.selectedSegmentIndex == 1 {
-            UserDefaults.standard.set(VStore.APP_THEME_DARK, forKey: KStore.appTheme.rawValue)
-            Common.updateAppTheme(.dark)
+            ThemeManager.shared.currentTheme = .dark
         }else {
-            UserDefaults.standard.set(VStore.APP_THEME_Light, forKey: KStore.appTheme.rawValue)
-            Common.updateAppTheme(.light)
+            ThemeManager.shared.currentTheme = .light
         }
         
         

@@ -20,7 +20,17 @@ class HomeMainController: RSDBaseViewController {
         self.collectionView.delegate = self
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if self.traitCollection.userInterfaceStyle == .dark {
+            
+        }
+        if self.traitCollection.userInterfaceStyle == .light {
+            
+        }
+    }
 }
+
 
 extension HomeMainController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeMainController" customModule="livebook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeMainController" customModule="notebook" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="nYa-yF-G2Y" id="ghA-na-kCa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,15 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-XM-RQu" customClass="RSDNavigationView" customModule="RSDSwiftKit">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="88" id="DtW-iB-cLM"/>
-                    </constraints>
-                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-yF-G2Y">
-                    <rect key="frame" x="0.0" y="88" width="393" height="730"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BNO-ga-7Gb">
                         <size key="itemSize" width="128" height="128"/>
@@ -37,6 +30,40 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-XM-RQu" customClass="RSDNavigationView" customModule="RSDSwiftKit">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-wv-uf4">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RDQ-uH-f2h">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM0-SN-9tG">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PM0-SN-9tG" secondAttribute="bottom" id="1jV-aL-UB7"/>
+                                    <constraint firstAttribute="trailing" secondItem="PM0-SN-9tG" secondAttribute="trailing" id="A7V-Fk-ChW"/>
+                                    <constraint firstItem="PM0-SN-9tG" firstAttribute="top" secondItem="RDQ-uH-f2h" secondAttribute="top" id="Brm-CD-N1Z"/>
+                                    <constraint firstItem="PM0-SN-9tG" firstAttribute="leading" secondItem="RDQ-uH-f2h" secondAttribute="leading" id="PfZ-3Y-CxA"/>
+                                </constraints>
+                            </view>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <blurEffect style="regular"/>
+                        </visualEffectView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="DtW-iB-cLM"/>
+                        <constraint firstItem="HTf-wv-uf4" firstAttribute="leading" secondItem="gvR-XM-RQu" secondAttribute="leading" id="YpE-0D-320"/>
+                        <constraint firstAttribute="trailing" secondItem="HTf-wv-uf4" secondAttribute="trailing" id="jSb-1Y-9N4"/>
+                        <constraint firstItem="HTf-wv-uf4" firstAttribute="top" secondItem="gvR-XM-RQu" secondAttribute="top" id="sWS-Sf-hdK"/>
+                        <constraint firstAttribute="bottom" secondItem="HTf-wv-uf4" secondAttribute="bottom" id="tNT-70-yeK"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,11 +72,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gvR-XM-RQu" secondAttribute="trailing" id="1uj-hD-TNA"/>
                 <constraint firstItem="gvR-XM-RQu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O2v-Cp-lDY"/>
                 <constraint firstItem="gvR-XM-RQu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TBU-Fz-5sZ"/>
-                <constraint firstItem="nYa-yF-G2Y" firstAttribute="top" secondItem="gvR-XM-RQu" secondAttribute="bottom" id="eNo-Fg-bL5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nYa-yF-G2Y" secondAttribute="trailing" id="hRr-C1-Jw4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nYa-yF-G2Y" secondAttribute="bottom" id="x4u-mN-xho"/>
+                <constraint firstItem="nYa-yF-G2Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nsh-Fm-Q0q"/>
+                <constraint firstAttribute="bottom" secondItem="nYa-yF-G2Y" secondAttribute="bottom" id="zm9-9Q-jDP"/>
             </constraints>
-            <point key="canvasLocation" x="140" y="21"/>
+            <point key="canvasLocation" x="139.69465648854961" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

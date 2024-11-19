@@ -14,12 +14,22 @@ class RSDTabBarController: UITabBarController {
         self.setupTabbar()
         self.setupViewController()
     }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if self.traitCollection.userInterfaceStyle == .dark {
+            self.darkStyle()
+        }
+        if self.traitCollection.userInterfaceStyle == .light {
+            self.lightStyle()
+        }
+    }
+    
     private func setupTabbar(){
         self.tabBar.layer.shadowColor = UIColor.rsd.hex("#000000").cgColor
         self.tabBar.layer.shadowOffset = CGSizeMake(0, -1)
         self.tabBar.layer.shadowOpacity = 0.15
-//        self.tabBar.unselectedItemTintColor =
-//        self.tabBar.tintColor =
+    }
+    private func lightStyle(){
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .white
@@ -31,6 +41,19 @@ class RSDTabBarController: UITabBarController {
             self.tabBar.scrollEdgeAppearance = appearance
         }
     }
+    private func darkStyle(){
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .black
+        appearance.backgroundImage = UIImage()
+        appearance.shadowImage = UIImage()
+        appearance.shadowColor = .clear
+        UITabBar.appearance().standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            self.tabBar.scrollEdgeAppearance = appearance
+        }
+    }
+    
     
     private func setupViewController(){
         

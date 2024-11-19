@@ -36,10 +36,5 @@ public struct VStore{
 
 
 public struct Common{
-    public static func updateAppTheme(_ theme: UIUserInterfaceStyle) {
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let window = windowScene.windows.first {
-            window.overrideUserInterfaceStyle = theme
-        }
-    }
+   
 }

@@ -15,14 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         self.window?.rootViewController = RSDTabBarController()
-        
-        if let appTheme = UserDefaults.standard.string(forKey: KStore.appTheme.rawValue) {
-            if appTheme == VStore.APP_THEME_DARK {
-                Common.updateAppTheme(.dark)
-            }else{
-                Common.updateAppTheme(.light)
-            }
-        }
+        ThemeManager.loadDefault()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
