@@ -29,8 +29,6 @@ class CenterMainController: RSDBaseViewController {
         }else {
             ThemeManager.shared.currentTheme = .light
         }
-        
-        
     }
     
     

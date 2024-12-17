@@ -5,11 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "tabbar_list@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "tabbar_item_none_01@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

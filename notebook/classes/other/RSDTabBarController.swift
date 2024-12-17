@@ -59,21 +59,21 @@ class RSDTabBarController: UITabBarController {
         
         if let homeVC = HomeMainController.rsd.initWithXib() {
             let vc = RSDBaseNavigationController(rootViewController: homeVC)
-            self.addChild(controller: vc, image: UIImage(named: "tabbar_home"), selectedImage: UIImage(named: "tabbar_home"), title: "首页")
+            self.addChild(controller: vc, image: UIImage(named: "tabbar_item_none_01"), selectedImage: UIImage(named: "tabbar_item_selected_01"), title: "日记列表")
         }
         if let feedlistVC = FeedListMainController.rsd.initWithXib() {
             let vc = RSDBaseNavigationController(rootViewController: feedlistVC)
-            self.addChild(controller: vc, image: UIImage(named: "tabbar_list"), selectedImage: UIImage(named: "tabbar_list"), title: "树洞")
+            self.addChild(controller: vc, image: UIImage(named: "tabbar_item_none_02"), selectedImage: UIImage(named: "tabbar_item_selected_02"), title: "广场")
         }
         if let meVC = CenterMainController.rsd.initWithXib() {
             let vc = RSDBaseNavigationController(rootViewController: meVC)
-            self.addChild(controller: vc, image: UIImage(named: "tabbar_center"), selectedImage: UIImage(named: "tabbar_center"), title: "我的")
+            self.addChild(controller: vc, image: UIImage(named: "tabbar_item_none_03"), selectedImage: UIImage(named: "tabbar_item_selected_03"), title: "我的")
         }
     }
     
     private func addChild(controller: UIViewController, image: UIImage?, selectedImage: UIImage?, title: String){
-        controller.tabBarItem.image = image?.rsd.scaleForWidth(width: 30)?.withRenderingMode(.alwaysOriginal)
-        controller.tabBarItem.selectedImage = selectedImage?.rsd.scaleForWidth(width: 30)?.withRenderingMode(.alwaysOriginal)
+        controller.tabBarItem.image = image?.withRenderingMode(.alwaysOriginal)
+        controller.tabBarItem.selectedImage = selectedImage?.withRenderingMode(.alwaysOriginal)
         controller.tabBarItem.title = title
         self.addChild(controller)
     }
